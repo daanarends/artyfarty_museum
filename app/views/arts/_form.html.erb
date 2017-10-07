@@ -15,7 +15,6 @@
 
   <%= f.label :museum_id %>
   <%= f.collection_select(:museum_id, Museum.all, :id, :name) %>
-
   <%= f.submit (@art.new_record? ? "Create" : "Update") %>
 
 <% end %>
