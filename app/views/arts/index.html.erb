@@ -3,8 +3,8 @@
 <% @arts.each do |art| %>
 <p><%= link_to art.name, art_path(art.id) %></p>
 
+  <% end %>
+
 <hr>
 
-  <% end %>
-<br>
-<br>
+<%= link_to "[Add new art]", new_art_path %>
