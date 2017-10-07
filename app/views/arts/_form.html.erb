@@ -1,0 +1,18 @@
+<%= form_for @art do |f| %>
+<ul>
+  <% @art.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit (@art.new_record? ? "Create" : "Update") %>
+
+<% end %>
