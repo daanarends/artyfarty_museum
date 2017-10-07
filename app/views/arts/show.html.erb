@@ -2,6 +2,7 @@
 
 <p>Age: <%= @art.age %></p>
 <%= image_tag @art.img_url %>
+<p>Museum: <%= @art.museum.name %></p>
 <hr>
 
 <%= link_to "[Edit]", edit_art_path(@art.id) %>
