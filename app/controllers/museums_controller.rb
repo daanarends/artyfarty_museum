@@ -37,7 +37,7 @@ class MuseumsController < ApplicationController
    private
 
    def museum_params
-     params.require(:art).permit(:name, :location)
+     params.require(:museum).permit(:name, :location)
    end
 
 

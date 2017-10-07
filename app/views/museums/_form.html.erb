@@ -1,0 +1,15 @@
+<%= form_for @museum do |f| %>
+<ul>
+  <% @museum.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.submit (@museum.new_record? ? "Create" : "Update") %>
+
+<% end %>
