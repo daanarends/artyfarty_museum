@@ -1,0 +1,14 @@
+<h1> List of museums </h1>
+
+
+    <% @museums.each do |museum| %>
+
+        <p><%= museum.name %></p>
+        <p><%= link_to 'Show', museum %></p>
+      
+
+
+    <% end %>
+
+
+<br>
