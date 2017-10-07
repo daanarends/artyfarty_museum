@@ -26,3 +26,12 @@ input[type=text,number] {
 .Header {
   padding: 20px;
 }
+.Footie{
+}
+.container
+{
+    min-height: 70%;
+    min-height: -webkit-calc(100% - 186px);
+    min-height: -moz-calc(100% - 186px);
+    min-height: calc(100% - 186px);
+}

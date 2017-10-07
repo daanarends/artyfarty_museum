@@ -5,17 +5,19 @@
   <%= @museum.name %>
 </p>
 
-<h4>List of Art</h4>
+<h3>List of Art</h3>
 
-<% if @museums.arts.any? %>
+<% if @museum.arts.any? %>
   <ul>
-    <% @valley.arts.each do |dino| %>
+    <% @museum.arts.each do |art| %>
       <li><%= art.name %></li>
     <% end %>
   </ul>
 <% else %>
-  <p>There is not art in this museum.</p>
+  <p>There is no art in this museum.</p>
 <% end %>
-
-<%= link_to 'Edit', edit_museums_path(@museum) %> |
-<%= link_to 'Back', museums_path %>
+<footer class="Footie">
+<%= link_to 'Edit', edit_museum_path(@museum) %> |
+<%= link_to 'Back', museums_path(@museum) %>
+<br/>
+</footer>
