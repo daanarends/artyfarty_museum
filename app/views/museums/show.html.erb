@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @museum.name %>
+</p>
+
+<h4>List of Art</h4>
+
+<% if @museums.arts.any? %>
+  <ul>
+    <% @valley.arts.each do |dino| %>
+      <li><%= art.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There is not art in this museum.</p>
+<% end %>
+
+<%= link_to 'Edit', edit_museums_path(@museum) %> |
+<%= link_to 'Back', museums_path %>
