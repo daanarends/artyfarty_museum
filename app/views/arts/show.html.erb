@@ -1,9 +1,16 @@
+<head>
+  <link rel="stylesheet" type="text/scss" href="/Documents/beginner-bootcamp/hackuthon/app/assets/stylesheets/application.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
 <h1><%= @art.name %></h1>
 
-<p>Age: <%= @art.age %></p>
+<div class="Image">
 <%= image_tag @art.img_url %>
+</div>
+<p>Age: <%= @art.age %></p>
+
 <p>Museum: <%= @art.museum.name %></p>
 <hr>
 
-<%= link_to "[Edit]", edit_art_path(@art.id) %>
-<%= link_to "[Delete]", art_path(@art.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Edit", edit_art_path(@art.id) %>
+<%= link_to "Delete", art_path(@art.id), method: :delete, data: { confirm: "Are you sure?" } %>
