@@ -4,18 +4,18 @@
   <strong>Name:</strong>
   <%= @museum.name %>
 </p>
-
+<hr/>
 <h3>List of Art</h3>
+<br/>
 
 <% if @museum.arts.any? %>
-  <ul>
     <% @museum.arts.each do |art| %>
-      <li><%= art.name %></li>
+      <p><%= art.name %></p>
     <% end %>
-  </ul>
 <% else %>
   <p>There is no art in this museum.</p>
 <% end %>
+<hr/>
 <footer class="Footie">
 <%= link_to 'Edit', edit_museum_path(@museum) %> |
 <%= link_to 'Back', museums_path(@museum) %>
