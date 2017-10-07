@@ -1,19 +1,29 @@
 <%= form_for @art do |f| %>
+<head>
+  <link rel="stylesheet" type="text/scss" href="/Documents/beginner-bootcamp/hackuthon/app/assets/stylesheets/application.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
 <ul>
   <% @art.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
   <% end %>
 </ul>
+<!-- <div class -->
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <br/>
 
-  <%= f.label :age %>
+  <br/><%= f.label :age %>
+  <!-- <br/> -->
   <%= f.number_field :age %>
+  <br/>
+  <br/>
 
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
+  <br/>
 
-  <%= f.label :museum_id %>
+  <br/><%= f.label :museum_id %>
   <%= f.collection_select(:museum_id, Museum.all, :id, :name) %>
   <%= f.submit (@art.new_record? ? "Create" : "Update") %>
 

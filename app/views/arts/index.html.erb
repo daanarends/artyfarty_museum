@@ -1,10 +1,17 @@
-<h1>Art is life</h1>
+<head>
+<link rel="stylesheet" type="text/scss" href="/Documents/beginner-bootcamp/hackuthon/app/assets/stylesheets/application.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+</head>
+<h2> List of stored artworks </h2>
+<br/>
 
 <% @arts.each do |art| %>
 <p><%= link_to art.name, art_path(art.id) %></p>
 
   <% end %>
-
+<br/>
+<br/>
 <hr>
 
-<%= link_to "[Add new art]", new_art_path %>
+<%= link_to "Add new art", new_art_path %>

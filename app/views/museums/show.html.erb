@@ -5,7 +5,7 @@
   <%= @museum.name %>
 </p>
 
-<h4>List of Art</h4>
+<h3>List of Art</h3>
 
 <% if @museum.arts.any? %>
   <ul>
@@ -14,8 +14,10 @@
     <% end %>
   </ul>
 <% else %>
-  <p>There is not art in this museum.</p>
+  <p>There is no art in this museum.</p>
 <% end %>
-
+<footer class="Footie">
 <%= link_to 'Edit', edit_museum_path(@museum) %> |
-<%= link_to 'Back', museum_path %>
+<%= link_to 'Back', museums_path(@museum) %>
+<br/>
+</footer>

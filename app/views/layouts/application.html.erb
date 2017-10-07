@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ArtyfartyMuseum</title>
+    <title>Artworks</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,19 @@
   </head>
 
   <body>
+    <div class="Header">
+    <h1>
+      Art is life
+    </h1>
+  </div>
     <%= yield %>
     <br><br>
-<hr>
-
-<%= link_to "[All artyfarty things]", root_path %>
-<%= link_to "[All museums]", museums_path %>
+    <div class="container">
+<div class="footer">
+<%= link_to "All artyfarty things", root_path %><p>   </p>
+<%= link_to "All museums", museums_path %><p>   </p>
+<%= link_to "All artworks", root_path %>
+</div>
+</div>
   </body>
 </html>
