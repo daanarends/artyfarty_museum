@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :museums
+
 
   root "arts#index"
-
+resources :museums do
   resources :arts
-
+end
 #     get "dinosaurs" => 'arts#index'
 # get 'arts/new' => "arts#new", as: :new_dinosaur
 # get "arts/:id" => "arts#show", as: :dinosaur

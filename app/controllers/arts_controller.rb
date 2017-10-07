@@ -7,6 +7,8 @@ class ArtsController < ApplicationController
     @art = Art.find(params[:id])
   end
 
+
+
   def new
     @art = Art.new
   end
@@ -48,7 +50,6 @@ class ArtsController < ApplicationController
     def art_params
       params.require(:art).permit(:name, :age, :img_url, :museum_id)
     end
-
 
 
 
