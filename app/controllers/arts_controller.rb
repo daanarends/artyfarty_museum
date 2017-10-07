@@ -4,7 +4,7 @@ class ArtsController < ApplicationController
   end
 
   def show
-    @art = Art.find(param[:name])
+    @art = Art.find(params[:id])
   end
 
   def new
@@ -22,11 +22,11 @@ class ArtsController < ApplicationController
     end
 
     def edit
-      @art = Art.find(param[:name])
+      @art = Art.find(params[:id])
     end
 
     def update
-      @art = Art.find(param[:name])
+      @art = Art.find(params[:id])
 
       if @art.update_attributes(art_params)
         redirect_to @art
@@ -36,7 +36,7 @@ class ArtsController < ApplicationController
     end
 
     def destroy
-      @art = Art.find(param[:name])
+      @art = Art.find(params[:id])
 
       @art.destroy
 
